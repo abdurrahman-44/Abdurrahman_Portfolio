@@ -1,0 +1,82 @@
+/* ============================================================================
+ * THE MAKING OF ABDURRAHMAN — Editorial Digital Book Design Token System
+ * Light Theme: Warm Ivory, Cream, Muted Sage, Soft Charcoal, Subtle Bronze
+ * Dark Theme: Midnight Charcoal, Deep Navy, Muted Grey, Soft Champagne, Muted Sage
+ * ============================================================================ */
+
+:root,
+[data-theme="light"] {
+  /* Surfaces */
+  --bg-canvas: #ECE7DF;
+  --bg-page: #FAF7F2;
+  --bg-page-alt: #F3EEE6;
+  --bg-surface: #FFFFFF;
+  --bg-elevated: rgba(250, 247, 242, 0.92);
+
+  /* Typography Ink */
+  --text-primary: #1F1E1C;
+  --text-secondary: #4E4B45;
+  --text-muted: #7C776E;
+
+  /* Editorial Accents */
+  --accent-primary: #8C6A43;        /* Subtle bronze */
+  --accent-strong: #6E502E;         /* Deep burnished bronze */
+  --accent-soft: rgba(140, 106, 67, 0.12);
+  --accent-secondary: #5B7365;      /* Muted sage */
+  --accent-secondary-soft: rgba(91, 115, 101, 0.14);
+
+  /* Borders & Bookbinding Rules */
+  --border-subtle: #E2DBD0;
+  --border-strong: #C9BFB0;
+  --spine-shadow: linear-gradient(
+    90deg,
+    rgba(31, 30, 28, 0) 0%,
+    rgba(31, 30, 28, 0.05) 42%,
+    rgba(31, 30, 28, 0.16) 50%,
+    rgba(31, 30, 28, 0.05) 58%,
+    rgba(31, 30, 28, 0) 100%
+  );
+
+  /* Shadows */
+  --shadow-book: 0 28px 70px -18px rgba(28, 25, 21, 0.22), 0 8px 24px -8px rgba(28, 25, 21, 0.12);
+  --shadow-page: inset 0 0 36px rgba(140, 106, 67, 0.04);
+  --shadow-card: 0 6px 20px -6px rgba(31, 30, 28, 0.07);
+}
+
+[data-theme="dark"] {
+  /* Surfaces: Midnight Charcoal & Deep Navy */
+  --bg-canvas: #0B0E14;
+  --bg-page: #121722;
+  --bg-page-alt: #171E2C;
+  --bg-surface: #1B2333;
+  --bg-elevated: rgba(18, 23, 34, 0.92);
+
+  /* Typography Ink: Soft Champagne & Muted Grey */
+  --text-primary: #EFE9DF;
+  --text-secondary: #A7B0C0;
+  --text-muted: #6E7889;
+
+  /* Editorial Accents: Soft Champagne & Muted Sage */
+  --accent-primary: #D4B895;        /* Soft champagne */
+  --accent-strong: #E5CEB0;         /* Warm champagne highlight */
+  --accent-soft: rgba(212, 184, 149, 0.12);
+  --accent-secondary: #7D9B8B;      /* Muted sage */
+  --accent-secondary-soft: rgba(125, 155, 139, 0.15);
+
+  /* Borders & Bookbinding Rules */
+  --border-subtle: #232C3D;
+  --border-strong: #34415A;
+  --spine-shadow: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.25) 42%,
+    rgba(0, 0, 0, 0.58) 50%,
+    rgba(0, 0, 0, 0.25) 58%,
+    rgba(0, 0, 0, 0) 100%
+  );
+
+  /* Shadows */
+  --shadow-book: 0 32px 80px -16px rgba(0, 0, 0, 0.72), 0 12px 32px -8px rgba(0, 0, 0, 0.5);
+  --shadow-page: inset 0 0 42px rgba(0, 0, 0, 0.28);
+  --shadow-card: 0 10px 26px -8px rgba(0, 0, 0, 0.42);
+}

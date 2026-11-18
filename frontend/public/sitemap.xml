@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://makingofabdurrahman.vercel.app/chapter/home</loc><priority>1.0</priority></url>
+  <url><loc>https://makingofabdurrahman.vercel.app/chapter/intro</loc><priority>0.9</priority></url>
+  <url><loc>https://makingofabdurrahman.vercel.app/chapter/education</loc><priority>0.8</priority></url>
+  <url><loc>https://makingofabdurrahman.vercel.app/chapter/certificates</loc><priority>0.8</priority></url>
+  <url><loc>https://makingofabdurrahman.vercel.app/chapter/experience</loc><priority>0.8</priority></url>
+  <url><loc>https://makingofabdurrahman.vercel.app/chapter/skills</loc><priority>0.8</priority></url>
+  <url><loc>https://makingofabdurrahman.vercel.app/chapter/projects</loc><priority>0.9</priority></url>
+  <url><loc>https://makingofabdurrahman.vercel.app/chapter/achievements</loc><priority>0.7</priority></url>
+  <url><loc>https://makingofabdurrahman.vercel.app/chapter/services</loc><priority>0.8</priority></url>
+  <url><loc>https://makingofabdurrahman.vercel.app/chapter/journal</loc><priority>0.8</priority></url>
+  <url><loc>https://makingofabdurrahman.vercel.app/chapter/perspectives</loc><priority>0.6</priority></url>
+  <url><loc>https://makingofabdurrahman.vercel.app/chapter/next-chapter</loc><priority>0.7</priority></url>
+  <url><loc>https://makingofabdurrahman.vercel.app/chapter/contact</loc><priority>0.9</priority></url>
+</urlset>
