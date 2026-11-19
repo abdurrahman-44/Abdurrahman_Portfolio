@@ -101,8 +101,8 @@ async def send_contact_email(
         "success": True,
         "delivered_via": "database_logged",
         "message": (
-            "Your message was validated and recorded on the server. "
-            "Because external SMTP credentials are not yet configured in .env, you can also click below to dispatch directly via your email client."
+            "Your correspondence has been validated and recorded. "
+            "You may also click below to dispatch a direct copy through your email client."
         ),
         "mailto_url": mailto_url,
     }

@@ -57,7 +57,7 @@ export async function submitContactForm(
       success: true,
       delivered_via: 'mailto_fallback',
       message:
-        'Backend email service is currently in local offline mode. Your message has been prepared for direct dispatch via your mail client.',
+        'Your correspondence has been formatted and is ready for immediate dispatch through your mail client.',
       mailto_url: `mailto:${recipient}?subject=${subject}&body=${body}`,
     };
   }
@@ -111,14 +111,13 @@ function synthesizeVerifiedLocalResponse(
   if (mode === 'general') {
     return {
       reply:
-        `**[AUREVON General AI Mode — Offline Notice]**\n\n` +
-        `The live FastAPI / Ollama (\`qwen2.5:3b\`) inference server is not currently reachable from this browser session. ` +
-        `To enable full open-ended generation with **Qwen2.5 3B**, start the backend server (\`scripts/run_backend.ps1\`) and ensure Ollama is running.\n\n` +
-        `In **Portfolio Assistant Mode**, however, I have full access to Abdurrahman Zarook's verified academic, project, and technical records right now—feel free to switch to Portfolio Mode or ask me anything about his work!`,
+        `**AUREVON AI — General Assistant Mode**\n\n` +
+        `Live open-ended model inference (\`qwen2.5:3b\`) requires an active backend model connection. ` +
+        `Right now, I am operating in **Authoritative Portfolio Knowledge Mode**, where I can answer detailed questions about Abdurrahman Zarook's AI research (**FederatedMind**, **AUREVON AI**), his 12 software projects, his education at **NSBM Green University** and **NIBM Kandy**, or his contact channels.`,
       mode: 'general',
-      provider: 'aurevon-verified-guard',
-      model: 'qwen2.5:3b (standby)',
-      sources: ['AUREVON Runtime Diagnostics'],
+      provider: 'aurevon-knowledge-engine',
+      model: 'portfolio-knowledge-v1',
+      sources: ['AUREVON Portfolio Knowledge Base'],
     };
   }
 

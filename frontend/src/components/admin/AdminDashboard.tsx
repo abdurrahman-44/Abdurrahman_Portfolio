@@ -62,7 +62,7 @@ export const AdminDashboard: React.FC = () => {
   const [certTitle, setCertTitle] = useState('');
   const [certInstitution, setCertInstitution] = useState('');
   const [certDate, setCertDate] = useState('2026');
-  const [certStatus, setCertStatus] = useState<'Verified' | 'Pending Proof'>('Verified');
+  const [certStatus, setCertStatus] = useState<'Verified' | 'Completed'>('Verified');
 
   // New Journal Article State
   const [postTitle, setPostTitle] = useState('');
@@ -98,20 +98,12 @@ export const AdminDashboard: React.FC = () => {
         setToken(body.access_token);
         return;
       }
-    } catch {
-      // Fallback for local owner verification when backend is not running
-    }
-
-    if (
-      email.trim().toLowerCase() === 'abdurrahmanzarook4455@gmail.com' &&
-      password.length >= 8
-    ) {
-      const localToken = 'local-owner-session-token';
-      sessionStorage.setItem('making_of_abdurrahman_admin_token', localToken);
-      setToken(localToken);
-    } else {
       setAuthError(
-        'Invalid owner credentials. Use your configured ADMIN_EMAIL and ADMIN_INITIAL_PASSWORD.'
+        'Invalid owner credentials. Verify your ADMIN_EMAIL and ADMIN_INITIAL_PASSWORD on the backend.'
+      );
+    } catch {
+      setAuthError(
+        'Unable to reach the backend authentication server. Start the FastAPI backend (scripts/run_backend.ps1) to sign in.'
       );
     }
   };
@@ -562,12 +554,12 @@ export const AdminDashboard: React.FC = () => {
                 <select
                   value={certStatus}
                   onChange={(e) =>
-                    setCertStatus(e.target.value as 'Verified' | 'Pending Proof')
+                    setCertStatus(e.target.value as 'Verified' | 'Completed')
                   }
                   className="rounded-xl border border-rule bg-page-alt px-3 py-2 text-xs"
                 >
                   <option value="Verified">Verified</option>
-                  <option value="Pending Proof">Pending Proof</option>
+                  <option value="Completed">Completed</option>
                 </select>
               </div>
               <button

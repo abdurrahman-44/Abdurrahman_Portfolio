@@ -165,19 +165,9 @@ export const InteractivePortrait3D: React.FC<InteractivePortrait3DProps> = ({
               className="inline-flex items-center gap-1 rounded-lg border border-rule bg-page px-2.5 py-1 font-mono text-[10px] text-ink-secondary transition hover:border-accent hover:text-ink"
             >
               <Eye className="h-3 w-3 text-accent" />
-              <span>{viewMode === '3d' ? '2D Portrait View' : '3D Stage View'}</span>
+              <span>{viewMode === '3d' ? 'Switch to 2D Portrait' : 'Switch to 3D Stage'}</span>
             </button>
           )}
-          <button
-            type="button"
-            onClick={() => setShowPipelineInfo((prev) => !prev)}
-            className="inline-flex items-center gap-1 rounded-lg border border-rule bg-page px-2 py-1 font-mono text-[10px] text-ink-secondary transition hover:border-accent hover:text-ink"
-            title="3D GLB Rigging Pipeline Information"
-            aria-label="Toggle 3D GLB Pipeline Info"
-          >
-            <Info className="h-3 w-3 text-accent" />
-            <span>GLB Pipeline</span>
-          </button>
         </div>
       </div>
 
@@ -259,28 +249,11 @@ export const InteractivePortrait3D: React.FC<InteractivePortrait3DProps> = ({
               className="h-full w-full object-cover object-top"
             />
             <div className="absolute bottom-3 left-3 right-3 rounded-lg border border-rule bg-page/90 px-3 py-1.5 font-mono text-[10px] text-ink-secondary">
-              Verified Identity Portrait — Abdurrahman Zarook
+              Abdurrahman Zarook — Studio Portrait
             </div>
           </div>
         )}
       </div>
-
-      {/* Transparent 3D GLB Pipeline Notice */}
-      {showPipelineInfo && (
-        <div className="mt-3 rounded-xl border border-accent/40 bg-page p-3 text-xs text-ink-secondary">
-          <div className="flex items-center gap-1.5 font-semibold text-ink">
-            <Sparkles className="h-3.5 w-3.5 text-accent" />
-            <span>Identity-Preserving 3D GLB Avatar Pipeline</span>
-          </div>
-          <p className="mt-1 leading-relaxed">
-            In strict compliance with portfolio identity rules, no generic third-party human mesh is substituted. The stage currently renders Abdurrahman&apos;s verified portrait in a Three.js / React Three Fiber 3D relief sculpture, and automatically upgrades to a rigged full-head mesh as soon as a user-approved photogrammetry `.glb` asset is placed at{' '}
-            <code className="rounded bg-page-alt px-1 py-0.5 font-mono text-[10px] text-accent">
-              public/assets/models/abdurrahman-avatar.glb
-            </code>
-            .
-          </p>
-        </div>
-      )}
     </div>
   );
 };

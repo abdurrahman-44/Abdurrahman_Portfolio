@@ -60,13 +60,13 @@ const CertificatesLeftPage: React.FC<{
     <div className="space-y-5">
       <div>
         <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent">
-          Chapter 04 • Certifications
+          Chapter 04 • Certifications & Credentials
         </span>
         <h2 className="mt-1 font-serif text-2xl font-bold text-ink sm:text-3xl">
-          Verified Academic & Technical Credentials
+          Academic & Technical Credentials
         </h2>
         <p className="mt-1 text-xs leading-relaxed text-ink-secondary">
-          Every credential listed in this folio is strictly verified. Pending certificates remain transparently marked until official documentation is attached.
+          Formal qualifications in computing principles, software engineering, and systems analysis completed across Sri Lankan higher-education institutions.
         </p>
       </div>
 
@@ -223,7 +223,7 @@ const CertificatesRightPage: React.FC<{
               <span>Open Full Inspection Modal</span>
             </button>
 
-            {selectedCert.verification_url ? (
+            {selectedCert.verification_url && (
               <a
                 href={selectedCert.verification_url}
                 target="_blank"
@@ -233,27 +233,18 @@ const CertificatesRightPage: React.FC<{
                 <span>Verify Credential</span>
                 <ExternalLink className="h-3.5 w-3.5 text-accent" />
               </a>
-            ) : (
-              <span className="inline-flex items-center gap-1 rounded-lg border border-rule bg-page-alt px-3 py-2 font-mono text-[10px] text-ink-muted">
-                <ShieldCheck className="h-3.5 w-3.5 text-sage" />
-                No fabricated verification URL
-              </span>
             )}
           </div>
         </div>
       </div>
 
-      {/* CMS Note */}
+      {/* Academic Foundation Summary */}
       <div className="rounded-xl border border-rule bg-page-alt/60 p-4 text-xs text-ink-secondary">
         <div className="font-mono text-[11px] font-semibold uppercase tracking-wider text-accent">
-          Content Integrity & Admin CMS
+          Academic & Technical Foundation
         </div>
         <p className="mt-1 leading-relaxed">
-          Additional certificates and scanned proof images can be added or updated at any time via the protected{' '}
-          <a href="/admin" className="text-accent underline">
-            Admin Dashboard (/admin)
-          </a>{' '}
-          without rebuilding the application.
+          These qualifications form the technical bridge between upper-secondary quantitative studies at Zahira National College and current honours undergraduate research in Artificial Intelligence at NSBM Green University.
         </p>
       </div>
 

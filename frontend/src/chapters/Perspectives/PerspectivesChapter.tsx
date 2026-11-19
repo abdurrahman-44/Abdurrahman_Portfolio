@@ -23,13 +23,13 @@ const PerspectivesLeftPage: React.FC = () => {
     <div className="space-y-5">
       <div>
         <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent">
-          Chapter 11 • Perspectives & Endorsements
+          Chapter 11 • Perspectives & Engineering Philosophy
         </span>
         <h2 className="mt-1 font-serif text-2xl font-bold text-ink sm:text-3xl">
-          Voices From Collaborators & Mentorship
+          Principles of Collaboration & Craft
         </h2>
         <p className="mt-1 text-xs leading-relaxed text-ink-secondary">
-          In strict adherence to editorial integrity, this volume only publishes real, verifiable endorsements explicitly approved by the people who provided them.
+          The core values and collaborative principles that guide my academic research, software engineering builds, and student mentorship.
         </p>
       </div>
 
@@ -55,40 +55,38 @@ const PerspectivesLeftPage: React.FC = () => {
                   </div>
                 </div>
                 <span className="inline-flex items-center gap-1 rounded-full bg-sage/20 px-2.5 py-0.5 font-mono text-[10px] text-sage">
-                  <CheckCircle2 className="h-3 w-3" /> Verified
+                  <CheckCircle2 className="h-3 w-3" /> Endorsement
                 </span>
               </footer>
             </blockquote>
           ))}
         </div>
       ) : (
-        /* Tasteful Editorial State when no approved testimonials are published yet */
-        <div className="rounded-2xl border border-dashed border-accent/50 bg-page-alt/70 p-6 shadow-card">
-          <div className="flex items-center gap-2.5">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-accent/40 bg-accent/10 text-accent">
-              <ShieldCheck className="h-5 w-5" />
-            </div>
-            <div>
-              <span className="font-mono text-[10px] uppercase tracking-widest text-accent">
-                Zero-Fabrication Editorial Policy
-              </span>
-              <h3 className="font-serif text-xl font-bold text-ink">
-                Verified Endorsements Registry (Awaiting Signed Approvals)
-              </h3>
-            </div>
+        <div className="space-y-3.5">
+          <div className="rounded-2xl border border-rule-strong bg-page-alt/80 p-4 shadow-card">
+            <h3 className="font-serif text-lg font-bold text-ink">
+              1. Clarity Over Complexity
+            </h3>
+            <p className="mt-1.5 text-xs leading-relaxed text-ink-secondary">
+              Whether architecting an async FastAPI stream in AUREVON AI or teaching O/L Mathematics, a solution is only complete when its logic can be understood clearly by the next person who reads it.
+            </p>
           </div>
 
-          <p className="mt-3 text-xs leading-relaxed text-ink-secondary sm:text-sm">
-            Rather than displaying synthetic or placeholder customer reviews, this section remains reserved exclusively for signed academic, tutoring, and project endorsements approved by their authors.
-          </p>
+          <div className="rounded-2xl border border-rule-strong bg-page-alt/80 p-4 shadow-card">
+            <h3 className="font-serif text-lg font-bold text-ink">
+              2. Privacy & Local-First Responsibility
+            </h3>
+            <p className="mt-1.5 text-xs leading-relaxed text-ink-secondary">
+              Modern AI should empower users without compromising their privacy. My research in FederatedMind (PyTorch & Flower) and local Ollama inference reflects a commitment to responsible, user-respecting intelligence.
+            </p>
+          </div>
 
-          <div className="mt-4 rounded-xl border border-rule bg-page p-3.5 font-mono text-[11px] text-ink-secondary">
-            <div className="flex items-center gap-1.5 text-ink font-semibold">
-              <Lock className="h-3.5 w-3.5 text-accent" />
-              <span>Production Visibility Control Active</span>
-            </div>
-            <p className="mt-1 text-[11px] text-ink-muted">
-              Approved testimonials added through the Admin Dashboard (<code className="text-accent">/admin</code>) appear here automatically.
+          <div className="rounded-2xl border border-rule-strong bg-page-alt/80 p-4 shadow-card">
+            <h3 className="font-serif text-lg font-bold text-ink">
+              3. Teaching as a Discipline of Mastery
+            </h3>
+            <p className="mt-1.5 text-xs leading-relaxed text-ink-secondary">
+              Mentoring students in Mathematics and Information Technology since 2025 has continually sharpened my communication skills, patience, and ability to break down intimidating technical problems.
             </p>
           </div>
         </div>

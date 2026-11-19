@@ -47,12 +47,12 @@ export const BookFooter: React.FC<BookFooterProps> = ({
                 className={`inline-flex h-2 w-2 rounded-full ${
                   aurevonStatus === 'online'
                     ? 'bg-emerald-500'
-                    : 'bg-amber-400'
+                    : 'bg-accent'
                 }`}
                 title={
                   aurevonStatus === 'online'
-                    ? 'AUREVON Backend Connected'
-                    : 'AUREVON Verified Portfolio Knowledge Ready'
+                    ? 'AUREVON AI Model Live'
+                    : 'AUREVON Portfolio Knowledge Engine Active'
                 }
               />
             </div>

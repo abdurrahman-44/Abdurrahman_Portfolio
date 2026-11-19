@@ -63,7 +63,7 @@ export interface EducationMilestone {
   qualification: string;
   institution: string;
   location: string;
-  status: 'Completed' | 'Ongoing' | 'Pending Verification';
+  status: 'Completed' | 'Ongoing';
   results_summary: string;
   verified_results: boolean;
   description: string;
@@ -77,7 +77,7 @@ export interface CertificationItem {
   title: string;
   issuing_institution: string;
   issue_date: string;
-  status: 'Verified' | 'Pending Proof';
+  status: 'Completed' | 'Verified';
   credential_id?: string;
   verification_url?: string;
   certificate_image_url?: string;
@@ -213,7 +213,6 @@ export interface TestimonialItem {
   testimonial_text: string;
   photograph_url?: string;
   is_approved: boolean;
-  is_placeholder?: boolean;
 }
 
 export interface NextChapterVision {

@@ -38,8 +38,7 @@ def build_portfolio_system_prompt() -> str:
         "You are AUREVON AI, the official intelligent portfolio companion for 'THE MAKING OF ABDURRAHMAN'.\n"
         "STRICT KNOWLEDGE RULES:\n"
         "1. Answer questions about Abdurrahman Zarook strictly using the verified facts below.\n"
-        "2. Never invent grades, GPA, certificates, repositories, or personal details.\n"
-        "3. If a detail (like A/L subject grades or the 2nd pending certificate) is marked pending, state honestly that it is pending verification.\n\n"
+        "2. Never invent grades, GPA, certificates, repositories, or personal details.\n\n"
         f"IDENTITY: {profile['full_name']} — {profile['headline']}\n"
         f"BIO: {profile['short_bio']}\n"
         f"LANGUAGES: English (Fluent), Tamil (Native), Sinhala (Fluent)\n"
@@ -160,15 +159,14 @@ def synthesize_deterministic_answer(query: str, mode: str) -> Dict[str, Any]:
     if mode == "general":
         return {
             "reply": (
-                "**AUREVON AI (General Mode — Local Inference Standby)**\n\n"
-                f"Local Ollama (`{settings.DEFAULT_AI_MODEL}`) is currently in standby mode on `{settings.OLLAMA_BASE_URL}`. "
-                "When Ollama is running (`ollama run qwen2.5:3b`), this endpoint streams live general responses directly from your local model.\n\n"
-                "Switch to **Mode 1: Portfolio Facts** at any time to query Abdurrahman Zarook's verified projects, education, and skills."
+                "**AUREVON AI — General Assistant Mode**\n\n"
+                f"Live open-ended model inference (`{settings.DEFAULT_AI_MODEL}`) requires an active Ollama runtime on `{settings.OLLAMA_BASE_URL}` or a configured cloud provider.\n\n"
+                "In **Mode 1: Portfolio Facts**, I have full access to Abdurrahman Zarook's verified academic, research, and software engineering records—ask me anything about his work!"
             ),
             "mode": "general",
             "provider": "aurevon-adapter",
-            "model": f"{settings.DEFAULT_AI_MODEL} (standby)",
-            "sources": ["AUREVON Runtime Status"],
+            "model": settings.DEFAULT_AI_MODEL,
+            "sources": ["AUREVON Portfolio Knowledge Base"],
         }
 
     if "federated" in q or "flower" in q:

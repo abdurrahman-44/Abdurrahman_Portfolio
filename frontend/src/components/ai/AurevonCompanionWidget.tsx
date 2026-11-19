@@ -155,7 +155,6 @@ export const AurevonCompanionWidget: React.FC = () => {
               alt="AUREVON AI"
               className="h-6 w-6"
             />
-            <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-sage animate-ping" />
             <span className="absolute -right-0.5 -top-0.5 h-2 w-2 rounded-full bg-sage" />
           </span>
           <span className="font-serif text-sm font-bold tracking-wide text-ink">
@@ -190,7 +189,7 @@ export const AurevonCompanionWidget: React.FC = () => {
                       AUREVON AI
                     </h3>
                     <span className="rounded-full bg-sage/20 px-2 py-0.5 font-mono text-[9px] font-medium text-sage">
-                      {aurevonStatus === 'online' ? 'Qwen2.5 3B Live' : 'Verified Graph'}
+                      {aurevonStatus === 'online' ? 'Qwen2.5 3B Live' : 'Portfolio Knowledge Engine'}
                     </span>
                   </div>
                   <p className="font-mono text-[10px] text-ink-muted">

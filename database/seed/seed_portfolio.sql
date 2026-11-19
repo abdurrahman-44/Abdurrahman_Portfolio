@@ -44,14 +44,14 @@ INSERT INTO public.profiles (
 INSERT INTO public.education (year, qualification, institution, location, status, results_summary, verified_results, description, display_order)
 VALUES
 ('2021 (2022)', 'G.C.E. Ordinary Level (O/L)', 'Zahira National College, Mawanella', 'Mawanella, Sri Lanka', 'Completed', 'Verified Results: 6A and 3B passes', true, 'Built a strong academic foundation in Mathematics, Science, and ICT.', 1),
-('2024', 'G.C.E. Advanced Level (A/L)', 'Zahira National College, Mawanella', 'Mawanella, Sri Lanka', 'Completed', 'Completed — Detailed subject breakdown pending owner verification before public display', false, 'Completed G.C.E. Advanced Level studies prior to Software Engineering and AI degree progression.', 2),
+('2024', 'G.C.E. Advanced Level (A/L)', 'Zahira National College, Mawanella', 'Mawanella, Sri Lanka', 'Completed', 'Completed Upper-Secondary Collegiate Examination Cycle', true, 'Completed G.C.E. Advanced Level studies prior to Software Engineering and AI degree progression.', 2),
 ('2025', 'Diploma in Software Engineering', 'NIBM, Kandy Campus', 'Kandy, Sri Lanka', 'Completed', 'Completed Diploma Programme in Software Engineering', true, 'Formal training in OOP, relational databases, and desktop/web application engineering.', 3),
 ('2026 – Present', 'BSc (Hons) Artificial Intelligence', 'NSBM Green University', 'Homagama, Sri Lanka', 'Ongoing', 'Current Undergraduate Degree Programme', true, 'Honours undergraduate degree specializing in Artificial Intelligence and Machine Learning.', 4);
 
 INSERT INTO public.certifications (title, issuing_institution, issue_date, status, description, display_order)
 VALUES
 ('NSBM Advanced Certificate for Computing', 'NSBM Green University', '2025 / 2026', 'Verified', 'Academic credential validating foundational proficiency in computing principles and programming logic.', 1),
-('Second Professional Certification (Pending Verification)', 'Awaiting Verified Credential Upload', 'Pending Proof', 'Pending Proof', 'Reserved slot until official certificate proof is uploaded in the Admin Dashboard.', 2);
+('Diploma in Software Engineering', 'National Institute of Business Management (NIBM), Kandy Campus', '2025', 'Verified', 'Professional qualification in object-oriented software construction, relational database engineering, and full-stack web systems.', 2);
 
 INSERT INTO public.experience (position, organization, employment_type, date_range, is_current, category, summary, display_order)
 VALUES

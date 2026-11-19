@@ -11,6 +11,8 @@ import {
   Cpu,
   AlertTriangle,
   Code2,
+  Monitor,
+  Terminal,
 } from 'lucide-react';
 import { usePortfolio } from '@/contexts/PortfolioContext';
 import { ProjectCategory, ProjectItem } from '@/types/portfolio';
@@ -314,6 +316,69 @@ const ProjectDetailRightPage: React.FC<{ project?: ProjectItem }> = ({
             <Sparkles className="h-3.5 w-3.5 text-accent" />
             <span>Ask AUREVON</span>
           </button>
+        </div>
+      </div>
+
+      {/* Interactive Architectural Blueprint & System Preview Plate */}
+      <div className="overflow-hidden rounded-2xl border border-rule-strong bg-canvas shadow-sm">
+        <div className="flex items-center justify-between border-b border-rule bg-page-alt px-4 py-2">
+          <div className="flex items-center gap-1.5">
+            <span className="h-2.5 w-2.5 rounded-full bg-accent/70" />
+            <span className="h-2.5 w-2.5 rounded-full bg-sage/70" />
+            <span className="h-2.5 w-2.5 rounded-full bg-rule-strong" />
+            <span className="ml-2 font-mono text-[10px] uppercase tracking-wider text-ink-muted">
+              System Architecture & Interface Plate — {project.slug}
+            </span>
+          </div>
+          <Monitor className="h-3.5 w-3.5 text-accent" />
+        </div>
+
+        <div className="p-4">
+          {project.screenshots && project.screenshots.length > 0 ? (
+            <div className="grid gap-3 sm:grid-cols-2">
+              {project.screenshots.map((shot, idx) => (
+                <figure
+                  key={idx}
+                  className="overflow-hidden rounded-xl border border-rule bg-page"
+                >
+                  <img
+                    src={shot.url}
+                    alt={shot.caption}
+                    className="h-32 w-full object-cover"
+                  />
+                  <figcaption className="px-3 py-1.5 font-mono text-[10px] text-ink-secondary">
+                    {shot.caption}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          ) : (
+            <div className="space-y-3">
+              {/* Visual Pipeline Nodes */}
+              <div className="flex flex-wrap items-center gap-2">
+                {project.architecture_summary
+                  .split(/->|<->/)
+                  .map((stage, i, arr) => (
+                    <React.Fragment key={i}>
+                      <div className="flex-1 min-w-[130px] rounded-xl border border-accent/30 bg-page p-2.5 shadow-sm">
+                        <div className="flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-wider text-accent">
+                          <Terminal className="h-3 w-3" />
+                          <span>Stage 0{i + 1}</span>
+                        </div>
+                        <div className="mt-1 font-mono text-[11px] font-medium text-ink">
+                          {stage.trim()}
+                        </div>
+                      </div>
+                      {i < arr.length - 1 && (
+                        <span className="font-mono text-xs font-bold text-accent">
+                          →
+                        </span>
+                      )}
+                    </React.Fragment>
+                  ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
